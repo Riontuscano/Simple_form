@@ -43,5 +43,10 @@
       <button type="reset" name="reset" class="btn btn-success">Reset</button>
     </div>
   </form>
+  <script>
+    if(window.history.replaceState){
+      window.history.replaceState(null, null,window.location.href);
+    }
+  </script>
 </body>
 </html>

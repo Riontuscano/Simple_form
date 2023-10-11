@@ -4,17 +4,17 @@ $id = $_GET['id'];
 $sql = "SELECT * FROM form1 WHERE ID = '$id'";
 $result = mysqli_query($connect,$sql);
 $row = mysqli_fetch_array($result);
-$name = $row['Name'];
+$name = $row['name'];
 $email = $row['Email'];
-$password = $row['Password'];
-$address = $row['Address'];
+$password = $row['password'];
+$address = $row['address'];
 
 if(isset($_POST['update'])){
   $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password'];
   $address = $_POST['address'];
-  $sql = "UPDATE form1 SET Name = '$name', Email = '$email', Password = '$password', Address = '$address' WHERE ID = '$id'";
+  $sql = "UPDATE form1 SET name = '$name', Email = '$email', password = '$password', address = '$address' WHERE ID = '$id'";
   $result = mysqli_query($connect,$sql);
   if($result){
     header('location:list.php');

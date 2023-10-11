@@ -10,6 +10,7 @@ $Gender = $_POST['gender'];
 $sql = "INSERT INTO form1 set name='$Name',email='$Email', password='$Password', address='$Address', gender='$Gender'";
 if(mysqli_query($connect,$sql)){
     echo "Data inserted successfully";
+    header('location:list.php');
 }
 else{
     echo "Data insertion failed";

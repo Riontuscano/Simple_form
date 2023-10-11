@@ -14,8 +14,8 @@ echo "<thead>";
 echo "<h2><i>Content of Entry Database</i></h2><br>";
 echo "<tr>";
     echo "<th>SR</th>";
-    echo "<th>Email</th>";
     echo "<th>Name</th>";
+    echo "<th>Email</th>";
     echo "<th>Password</th>";
     echo "<th>Address</th>";
     echo "<th>Gender</th>";
@@ -28,11 +28,11 @@ echo "<tbody>";
   while($row = mysqli_fetch_array($result)){
     echo "<tr>";
     echo "<td>".$row['ID']."</td>";
-    echo "<td>".$row['Name']."</td>";
+    echo "<td>".$row['name']."</td>";
     echo "<td>".$row['Email']."</td>";
-    echo "<td>".$row['Password']."</td>";
-    echo "<td>".$row['Address']."</td>";
-    echo "<td>".$row['Gender']."</td>";
+    echo "<td>".$row['password']."</td>";
+    echo "<td>".$row['address']."</td>";
+    echo "<td>".$row['gender']."</td>";
     echo "<td><a class='btn btn-primary' href='update.php?id=".$row['ID']."'>Update</a>";
     echo "<a class='btn btn-danger' href='delete.php?id=".$row['ID']."'>Delete</a></td>";
   }
